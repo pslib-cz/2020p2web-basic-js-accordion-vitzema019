@@ -225,6 +225,39 @@
             </div>
         </footer>
     </div>
+
+    <script>
+         
+        let prvky = document.getElementsByClassName("vypujcka-item")
+        console.log(prvky);
+        prvky[0].getElementsByTagName("input")[0].onclick = (e) =>{
+            MyFunction(0);
+        }
+        prvky[1].getElementsByTagName("input")[0].onclick = (e) =>{
+            MyFunction(1);
+        }
+        prvky[2].getElementsByTagName("input")[0].onclick = (e) =>{
+            MyFunction(2);
+        }
+
+       
+
+        let detail = document.getElementsByClassName("detail-vypujcky-container");
+            console.log(detail);
+
+            function MyFunction(x) {
+                let height = detail[x].scrollHeight + "px"
+                console.log(height)
+
+                if (detail[x].style.display == "block") {
+                    detail[x].style.display = "none";
+                }
+                else {
+                    detail[x].style.display = "block";
+                }
+        }
+        
+    </script>
 </body>
 
 </html>
