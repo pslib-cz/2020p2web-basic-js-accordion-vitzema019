@@ -227,9 +227,29 @@
     </div>
 
     <script>
-         
+         /*
         let prvky = document.getElementsByClassName("vypujcka-item")
-        console.log(prvky);
+        var detail = document.getElementsByClassName("detail-vypujcky-container");
+        for(let i =0; i < prvky.length; i++){
+            var input = prvky[i].getElementsByTagName("input");
+            console.log(detail[i])
+            input[0].onclick = (e) =>{ 
+                let height = detail[i].scrollHeight + "px"
+                console.log(height)
+                if (detail[i].style.height == height) {
+                    detail[i].style.height = 0;
+                }
+                else {
+                    detail[i].style.height = height;
+                    
+                }
+        }
+    }
+
+    */
+            
+        let prvky = document.getElementsByClassName("vypujcka-item")
+        
         prvky[0].getElementsByTagName("input")[0].onclick = (e) =>{
             MyFunction(0);
         }
@@ -239,21 +259,19 @@
         prvky[2].getElementsByTagName("input")[0].onclick = (e) =>{
             MyFunction(2);
         }
-
-       
-
+        
         let detail = document.getElementsByClassName("detail-vypujcky-container");
-            console.log(detail);
-
             function MyFunction(x) {
                 let height = detail[x].scrollHeight + "px"
                 console.log(height)
 
-                if (detail[x].style.display == "block") {
-                    detail[x].style.display = "none";
+
+                if (detail[x].style.height == height) {
+                    detail[x].style.height = 0;
                 }
                 else {
-                    detail[x].style.display = "block";
+                    detail[x].style.height = height;
+                    
                 }
         }
         

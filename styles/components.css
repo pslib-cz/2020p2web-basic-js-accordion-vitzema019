@@ -734,22 +734,27 @@ details>summary::-webkit-details-marker {
   background-color: var(--white);
 }
 
+
 .detail-vypujcky-item,
 .vypujcka-item-poznamka {
+  
   padding-top: 10px;
   padding-left: 5px;
 }
+
+
 
 .detail-vypujcky-specifikace {
   padding-top: 5px;
 }
 
 .detail-vypujcky-container {
-  display: none;
-}
-.detail-vypujcky-container.detail-vypujcky-container-checked {
+  overflow: hidden;
+  height: 0px;
   display: block;
+  transition:height 0.5s linear;
 }
+
 
 .vypujcka-container-icon-mobile,
 .vypujcka-container-icon-mobile-prehled {
